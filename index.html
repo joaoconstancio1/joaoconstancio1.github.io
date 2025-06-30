@@ -1,11 +1,160 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Minha Página</title>
-  </head>
-  <body>
-    <h1>Olá, eu sou o João!</h1>
-    <p>Bem-vindo ao meu portfólio.</p>
-  </body>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>João Vitor Constâncio - Desenvolvedor Flutter</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(90deg, #0057ff, #00c3ff);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #0057ff;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .card h3 {
+      margin-bottom: 0.5rem;
+      color: #222;
+    }
+
+    .card p {
+      color: #555;
+    }
+
+    footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill {
+      background: #0057ff;
+      color: white;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+
+    a {
+      color: #0057ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>João Vitor Constâncio</h1>
+  <p>Desenvolvedor Flutter | Aplicações Escaláveis | Código Limpo</p>
+</header>
+
+<section>
+  <h2 class="section-title">Sobre mim</h2>
+  <div class="card">
+    <p>Sou um desenvolvedor Flutter com 7 anos de experiência, especializado em criar aplicativos performáticos, escaláveis e com excelente usabilidade. Tenho projetos entregues para grandes empresas como Vivo, Poupatempo e Ciclic, atingindo milhões de usuários.</p>
+  </div>
+
+  <h2 class="section-title">Casos de Sucesso</h2>
+
+  <div class="card">
+    <h3>📱 Poupatempo App (10M+ downloads)</h3>
+    <p>Desenvolvi o app Flutter que unifica os principais serviços do governo de SP. Atuei com autenticação segura, integração com APIs REST e foco em performance.</p>
+  </div>
+
+  <div class="card">
+    <h3>🔒 Sentinela (Vivo)</h3>
+    <p>Aplicativo de segurança que detecta acesso físico não autorizado. Capturei fotos e dados automaticamente e integrei com monitoramento remoto em tempo real.</p>
+  </div>
+
+  <div class="card">
+    <h3>🧪 Testefone (GrooveTech)</h3>
+    <p>Plataforma que avalia recursos de celulares. Combinei Flutter com código nativo Kotlin/Swift para extrair performance de hardware e gerar diagnósticos automáticos.</p>
+  </div>
+
+  <h2 class="section-title">Habilidades Técnicas</h2>
+  <div class="card skills">
+    <div class="skill">Flutter</div>
+    <div class="skill">Dart</div>
+    <div class="skill">Firebase</div>
+    <div class="skill">CI/CD</div>
+    <div class="skill">Clean Architecture</div>
+    <div class="skill">Kotlin / Swift</div>
+    <div class="skill">REST APIs</div>
+    <div class="skill">Python</div>
+    <div class="skill">PostgreSQL</div>
+  </div>
+
+  <h2 class="section-title">Contato</h2>
+  <div class="card">
+    <p><strong>Email:</strong> joao@email.com</p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/seuperfil" target="_blank">linkedin.com/in/seuperfil</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/seunomeusuario" target="_blank">github.com/seunomeusuario</a></p>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 João Vitor Constâncio. Todos os direitos reservados.</p>
+</footer>
+
+</body>
 </html>
