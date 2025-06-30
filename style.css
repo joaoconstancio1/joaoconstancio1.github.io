@@ -4,12 +4,23 @@
   box-sizing: border-box;
 }
 
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 body {
   font-family: 'Segoe UI', Tahoma, sans-serif;
   line-height: 1.6;
   background: #f7f9fc;
   color: #333;
 }
+
 
 .container {
   max-width: 900px;
