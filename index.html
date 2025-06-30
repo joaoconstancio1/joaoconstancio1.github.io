@@ -4,17 +4,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>João Vitor Constâncio | Flutter Developer</title>
+  <title>Joao Constancio | Flutter Developer</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-
   <header>
     <div class="container">
       <h1>João Vitor Constâncio</h1>
       <p>Senior Flutter Developer | 7+ anos de experiência | Projetos com milhões de usuários</p>
-      <a class="btn" href="mailto:joaovitorconstancio@hotmail.com">Entrar em contato</a>
     </div>
   </header>
 
@@ -22,8 +20,9 @@
     <h2>Sobre Mim</h2>
     <p>Sou um desenvolvedor Flutter com mais de 7 anos de experiência, apaixonado por transformar ideias em soluções
       reais e impactantes. Ao longo da minha carreira, entreguei projetos de alta performance e escalabilidade para
-      empresas como Vivo, Poupatempo, GrooveTech e Ciclic. Além disso, estou legalmente autorizado a trabalhar com
-      empresas dos EUA através da minha empresa registrada no país.</p>
+      empresas como Vivo, Prodesp, Poupatempo, GrooveTech e Ciclic. Além disso, através das minhas empresas registradas,
+      posso
+      trabalhar globalmente para clientes dos EUA, Europa, Brazil e outros mercados internacionais.</p>
   </section>
 
   <section class="success-cases container">
@@ -77,15 +76,22 @@
 
   <section class="companies container">
     <h2>Empresas que Trabalhei</h2>
-    <div class="logo-row">
-      <img src="images/prodesp.png" alt="Prodesp" />
-      <img src="images/groovetech.png" alt="GrooveTech" />
-      <img src="images/iblue.png" alt="iBlue" />
-      <img src="images/vivo.png" alt="Vivo" />
-      <img src="images/faceres.png" alt="FACERES" />
+    <div class="carousel">
+      <div class="carousel-track">
+        <img src="images/groovetech.png" alt="GrooveTech" />
+        <img src="images/prodesp.png" alt="Prodesp" />
+        <img src="images/vivo.png" alt="Vivo" />
+        <img src="images/iblue.png" alt="iBlue" />
+        <img src="images/faceres.png" alt="FACERES" />
+        <!-- Duplicado para looping suave -->
+        <img src="images/groovetech.png" alt="GrooveTech" />
+        <img src="images/prodesp.png" alt="Prodesp" />
+        <img src="images/vivo.png" alt="Vivo" />
+        <img src="images/iblue.png" alt="iBlue" />
+        <img src="images/faceres.png" alt="FACERES" />
+      </div>
     </div>
   </section>
-
 
   <footer>
     <div class="container">
@@ -93,6 +99,7 @@
     </div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 
 </html>
