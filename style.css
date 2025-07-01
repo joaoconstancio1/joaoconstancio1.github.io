@@ -113,16 +113,10 @@ footer {
 
 .carousel-track img {
   width: 120px;
-  /* largura fixa */
   height: 60px;
-  /* altura fixa */
   object-fit: contain;
-  /* mantém proporção da imagem */
-
   padding: 5px;
-  /* espaço interno para “respirar” */
   border-radius: 8px;
-  /* deixa mais suave */
 }
 
 
@@ -164,5 +158,9 @@ footer {
 
   .carousel-track img {
     width: 150px;
+  }
+
+  .carousel-track {
+    animation: scroll-carousel 8s linear infinite;
   }
 }
