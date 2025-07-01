@@ -161,6 +161,6 @@ footer {
   }
 
   .carousel-track {
-    animation: scroll-carousel 8s linear infinite;
+    animation: scroll-carousel 5s linear infinite;
   }
 }
