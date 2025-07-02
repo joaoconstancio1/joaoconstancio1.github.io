@@ -1,5 +1,4 @@
-const switchToggle = document.getElementById('theme-switch');
-const langSwitch = document.getElementById('language-switch');
+
 
 // Todos os textos traduzidos para EN e PT
 const texts = {
@@ -98,9 +97,18 @@ function updateTexts(lang) {
 
     document.querySelector('footer p').textContent = texts[lang].footerText;
 }
+// === Tema escuro como padrão ===
+const switchToggle = document.getElementById('theme-switch');
+const langSwitch = document.getElementById('language-switch');
 
-// Inicialização tema
-const currentTheme = localStorage.getItem('theme');
+// Recuperar tema salvo
+let currentTheme = localStorage.getItem('theme');
+
+if (!currentTheme) {
+    currentTheme = 'dark'; // Padrão
+    localStorage.setItem('theme', 'dark');
+}
+
 if (currentTheme === 'dark') {
     document.body.classList.add('dark');
     switchToggle.checked = true;
@@ -109,12 +117,7 @@ if (currentTheme === 'dark') {
     switchToggle.checked = false;
 }
 
-// Inicialização idioma
-const currentLang = localStorage.getItem('lang') || 'en';
-langSwitch.value = currentLang;
-updateTexts(currentLang);
-
-// Eventos
+// Evento para alternar tema
 switchToggle.addEventListener('change', () => {
     if (switchToggle.checked) {
         document.body.classList.add('dark');
@@ -124,6 +127,7 @@ switchToggle.addEventListener('change', () => {
         localStorage.setItem('theme', 'light');
     }
 });
+
 
 langSwitch.addEventListener('change', () => {
     const selectedLang = langSwitch.value;

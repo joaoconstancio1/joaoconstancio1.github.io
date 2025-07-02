@@ -186,11 +186,16 @@ body.dark {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
   padding: 12px 20px;
-  background: transparent;
-  flex-wrap: nowrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--bg-color);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s;
 }
+
 
 .theme-toggle {
   display: flex;
