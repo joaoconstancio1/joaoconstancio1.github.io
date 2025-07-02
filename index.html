@@ -3,15 +3,25 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Joao Constancio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 </head>
 
 <body>
+  <header class="top-bar">
+    <div class="theme-toggle">
+      <input type="checkbox" id="theme-switch" />
+      <label for="theme-switch" class="switch">
+        <span class="icon-moon">🌙</span>
+        <span class="icon-sun">☀️</span>
+        <span class="slider"></span>
+      </label>
+    </div>
+  </header>
+
   <header>
     <div class="container">
       <img src="images/profile.jpg" alt="João Vitor Constâncio" class="profile-pic" />
@@ -22,7 +32,6 @@
       </p>
     </div>
   </header>
-
 
   <section class="about container">
     <h2>Sobre Mim</h2>
@@ -134,7 +143,6 @@
         <img src="images/ciclic.png" alt="Ciclic" />
         <img src="images/seduc.png" alt="Seduc" />
         <img src="images/almaviva.png" alt="AlmaViva" />
-
       </div>
     </div>
   </section>

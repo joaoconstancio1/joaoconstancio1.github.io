@@ -1,7 +1,161 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* Variáveis e temas */
+:root {
+  --bg-color: #fff;
+  --text-color: #111;
+  --text-secondary: #555;
+  --primary-color: #0077b5;
+  --card-bg: #fff;
+  --card-shadow: rgba(0, 0, 0, 0.05);
+  --contact-link-color: #333;
+  --contact-link-hover: #0077b5;
+  --header-bg: linear-gradient(135deg, #0057ff, #00c3ff);
+  --footer-bg: #222;
+  --footer-text: #ccc;
+}
+
+body.dark {
+  --bg-color: #121212;
+  --text-color: #eee;
+  --text-secondary: #ccc;
+  --primary-color: #00bcd4;
+  --card-bg: #1e1e1e;
+  --card-shadow: rgba(255 255 255 / 0.1);
+  --contact-link-color: #ddd;
+  --contact-link-hover: #00bcd4;
+  --header-bg: linear-gradient(135deg, #003c8f, #008bbf);
+  --footer-bg: #111;
+  --footer-text: #999;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Container */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* Top bar com switch */
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px 20px;
+  background: transparent;
+}
+
+.theme-toggle {
+  position: relative;
+}
+
+/* Esconder checkbox */
+#theme-switch {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Switch estilo iPhone */
+.switch {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 60px;
+  height: 34px;
+  background: #ccc;
+  border-radius: 34px;
+  cursor: pointer;
+  user-select: none;
+  padding: 0 8px;
+  box-sizing: border-box;
+  transition: background-color 0.3s;
+}
+
+/* Ícones dentro do switch */
+.switch .icon-moon,
+.switch .icon-sun {
+  font-size: 18px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  transition: color 0.3s;
+  color: #666;
+}
+
+.switch .icon-moon {
+  order: 1;
+}
+
+.switch .icon-sun {
+  order: 3;
+  margin-left: auto;
+}
+
+/* O círculo do toggle */
+.switch .slider {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+/* Quando checked - mover o slider para direita */
+#theme-switch:checked+.switch {
+  background: var(--primary-color);
+}
+
+#theme-switch:checked+.switch .slider {
+  transform: translateX(26px);
+}
+
+/* Ícones mudam de cor com toggle */
+#theme-switch:checked+.switch .icon-moon {
+  color: #ddd;
+}
+
+#theme-switch:checked+.switch .icon-sun {
+  color: yellow;
+}
+
+/* Header principal */
+header:nth-of-type(2) {
+  background: var(--header-bg);
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+header:nth-of-type(2) h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+header:nth-of-type(2) p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 .profile-pic {
@@ -14,68 +168,42 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-body {
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  line-height: 1.6;
-  background: #f7f9fc;
-  color: #333;
-}
-
-
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 2rem;
-}
-
-header {
-  background: linear-gradient(135deg, #0057ff, #00c3ff);
-  color: white;
-  padding: 3rem 1rem;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 2.8rem;
-  margin-bottom: 0.5rem;
-}
-
-header p {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-.btn {
-  display: inline-block;
-  background: white;
-  color: #0057ff;
-  padding: 0.6rem 1.2rem;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
+/* Seções */
 section {
   margin-bottom: 3rem;
   text-align: center;
 }
 
-
+/* Títulos */
 h2 {
   font-size: 1.8rem;
-  color: #0057ff;
+  color: var(--primary-color);
   margin-bottom: 1rem;
 }
 
-.card {
-  background: white;
+/* Cartões dos casos de sucesso */
+.success-cases .card {
+  background: var(--card-bg);
+  color: var(--text-color);
   padding: 1.5rem;
   margin-bottom: 1rem;
   border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 10px var(--card-shadow);
   text-align: left;
+  transition: background-color 0.3s, color 0.3s;
 }
 
+.success-cases .card h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.6rem;
+}
+
+.success-cases .card p {
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Lista de skills */
 .skills-list {
   display: flex;
   flex-wrap: wrap;
@@ -84,20 +212,61 @@ h2 {
 }
 
 .skills-list span {
-  background: #0057ff;
+  background: var(--primary-color);
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.9rem;
 }
 
-footer {
-  background: #222;
-  color: #ccc;
+/* Contato */
+#contact {
+  padding: 40px 0;
   text-align: center;
-  padding: 1rem;
 }
 
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.contact-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--contact-link-color);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-link:hover {
+  transform: scale(1.05);
+  color: var(--contact-link-hover);
+}
+
+.contact-link i {
+  font-size: 48px;
+  margin-bottom: 8px;
+}
+
+.contact-link span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Footer */
+footer {
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  text-align: center;
+  padding: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Carousel */
 .carousel {
   overflow: hidden;
   position: relative;
@@ -119,40 +288,21 @@ footer {
   border-radius: 8px;
 }
 
-#contact {
-  padding: 40px 0;
-  text-align: center;
+.companies .carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin-top: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
 }
 
-.contact-icons {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
+body.dark .companies .carousel {
+  background: rgba(233, 233, 233, 0.9);
 
-.contact-link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-  color: #333;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.contact-link:hover {
-  transform: scale(1.05);
-}
-
-.contact-link i {
-  font-size: 48px;
-  margin-bottom: 8px;
-}
-
-.contact-link span {
-  font-size: 16px;
-  font-weight: 500;
 }
 
 
@@ -166,29 +316,17 @@ footer {
   }
 }
 
-
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-
+/* Responsividade */
 @media (max-width: 768px) {
-  header h1 {
+  header:nth-of-type(2) h1 {
     font-size: 2rem;
   }
 
-  header p {
+  header:nth-of-type(2) p {
     font-size: 1rem;
   }
 
-  .card {
+  .success-cases .card {
     text-align: center;
   }
 
