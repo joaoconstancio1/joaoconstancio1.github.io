@@ -157,10 +157,11 @@ footer {
   }
 
   .carousel-track img {
-    width: 150px;
+    width: 130px;
+    height: 60px;
   }
 
   .carousel-track {
-    animation: scroll-carousel 1s linear infinite;
+    animation: scroll-carousel 10s linear infinite;
   }
 }
