@@ -34,7 +34,8 @@ const texts = {
         skillsTitle: "Technical Skills",
         collaborationTitle: "Collaboration History",
         contactTitle: "Contact",
-        footerText: "© 2025 João Vitor Constâncio. All rights reserved."
+        footerText: "© 2025 João Vitor Constâncio. All rights reserved.",
+        heroDescription: "Senior Flutter Developer | Senior Mobile Engineer<br />7+ years of experience | Projects with millions of users",
     },
     pt: {
         aboutTitle: "Sobre Mim",
@@ -68,7 +69,9 @@ const texts = {
         skillsTitle: "Habilidades Técnicas",
         collaborationTitle: "Histórico de Colaboração",
         contactTitle: "Contato",
-        footerText: "© 2025 João Vitor Constâncio. Todos os direitos reservados."
+        footerText: "© 2025 João Vitor Constâncio. Todos os direitos reservados.",
+        heroDescription: "Desenvolvedor Flutter Sênior | Engenheiro Mobile Sênior<br />7+ anos de experiência | Projetos com milhões de usuários",
+
     }
 };
 
@@ -96,6 +99,8 @@ function updateTexts(lang) {
     document.querySelector('#contact h2').textContent = texts[lang].contactTitle;
 
     document.querySelector('footer p').textContent = texts[lang].footerText;
+    document.getElementById('hero-description').innerHTML = texts[lang].heroDescription;
+
 }
 // === Tema escuro como padrão ===
 const switchToggle = document.getElementById('theme-switch');
